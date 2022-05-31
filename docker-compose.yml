@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  python_test:
+    build: .
+
+    command: [ "python", "./main.py" ]
+
+    environment:
+      PYTHONUNBUFFERED: 1
+
+    image: ${COMPOSE_TAG:test-python}
+
+    volumes:
+      - '.:/usr/src/test/'
+
+    working_dir: /usr/src/test/
