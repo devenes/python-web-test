@@ -25,5 +25,8 @@ jobs:
       - name: Build docker images
         run: docker-compose build
 
-      - name: Run tests
-        run: docker-compose run unit_test
+      # - name: Run tests
+      #   run: docker-compose run python_test
+
+      - name: Execute docker-compose
+        run: docker-compose up --exit-code-from python_test
