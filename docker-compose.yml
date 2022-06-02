@@ -9,7 +9,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
 
-    image: ${COMPOSE_TAG:test-python}
+    image: test-python
 
     volumes:
       - '.:/usr/src/test/'
