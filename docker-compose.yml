@@ -15,17 +15,3 @@ services:
       - '.:/usr/src/test/'
 
     working_dir: /usr/src/test/
-  unit_test:
-    build: .
-
-    command: [ "pytest -vv" ]
-
-    environment:
-      PYTHONUNBUFFERED: 1
-
-    image: test-python
-
-    volumes:
-      - '.:/usr/src/test/'
-
-    working_dir: /usr/src/test/
