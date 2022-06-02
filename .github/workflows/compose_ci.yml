@@ -18,14 +18,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      # - name: Login to DockerHub
-      #   run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-
-      # - name: Build docker images
-      #   run: docker-compose build
-
-      - name: Run tests        
         with:          
           run: docker-compose run --rm test
           echo: "{{ output }}"
@@ -35,6 +27,14 @@ jobs:
           else:
             description: "Test suite passed"
             always: true
+
+      # - name: Login to DockerHub
+      #   run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+      # - name: Build docker images
+      #   run: docker-compose build
+
+      
       
 
       # - name: Run tests
@@ -44,5 +44,5 @@ jobs:
       # - name: Execute docker-compose
       #   run: docker-compose up -t 10 --exit-code-from python_test
 
-      - name: Execute docker-compose
-        run: docker-compose up -d
+      # - name: Execute docker-compose
+      #   run: docker-compose up -d
