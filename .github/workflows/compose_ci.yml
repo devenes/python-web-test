@@ -25,20 +25,14 @@ jobs:
       # - name: Build docker images
       #   run: docker-compose build
 
-      - name: Run tests                      
-        run: docker-compose run --rm test
-        echo: "{{ output }}"
-        if: "{{ status }}" != "success"
-          description: "Test suite failed"
-          always: true
-        else:
-          description: "Test suite passed"
-          always: true
-    
+      - name: Run tests
+        run: docker build -t test-python --target test .
+
+      - name: Run test container
+        run: docker run -it --rm --name unit-test test-python
 
       # - name: Run tests
       #   run: docker-compose run python_test
-      # docker build -t java-docker --target test .
 
       # - name: Execute docker-compose
       #   run: docker-compose up -t 10 --exit-code-from python_test
