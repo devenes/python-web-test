@@ -32,4 +32,4 @@ jobs:
       #   run: docker-compose up --t 10 --exit-code-from python_test_1
 
       - name: Execute docker-compose
-        run: docker-compose up --timeout 10
+        run: docker-compose up -d --timeout 10
