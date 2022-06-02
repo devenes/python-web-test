@@ -22,20 +22,14 @@ jobs:
       # - name: Login to DockerHub
       #   run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
-      # - name: Build docker images
-      #   run: docker-compose build
-
-      - name: Run tests
-        run: docker build -t test-python --target test
-
-      - name: Run test container
-        run: docker run -it --rm --name unit-test test-python
+      - name: Build docker images
+        run: docker-compose build
 
       # - name: Run tests
       #   run: docker-compose run python_test
 
       # - name: Execute docker-compose
-      #   run: docker-compose up -t 10 --exit-code-from python_test
+      #   run: docker-compose up --t 10 --exit-code-from python_test
 
-      # - name: Execute docker-compose
-      #   run: docker-compose up -d
+      - name: Execute docker-compose
+        run: docker-compose up -d --timeout 10
