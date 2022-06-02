@@ -22,12 +22,30 @@ jobs:
       # - name: Login to DockerHub
       #   run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
-      - name: Build docker images
-        run: docker-compose build
+      # - name: Build docker images
+      #   run: docker-compose build
+
+      - name: Run tests
+        uses: actions/checkout@v2
+        with:
+          env:
+            COMPOSE_FILE: docker-compose.yml            
+          run: docker-compose run --rm test
+          echo: "{{ output }}"
+          if: "{{ status }}" != "success"
+            description: "Test suite failed"
+            always: true
+          else:
+            description: "Test suite passed"
+            always: true
+      
 
       # - name: Run tests
       #   run: docker-compose run python_test
+      # docker build -t java-docker --target test .
+
+      # - name: Execute docker-compose
+      #   run: docker-compose up -t 10 --exit-code-from python_test
 
       - name: Execute docker-compose
-        run: docker-compose up -t 10 \
-          --exit-code-from python_test
+        run: docker-compose up -d
