@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: docker-compose.yml
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+      # DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      # DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
 
     steps:
       - name: Checkout code
@@ -32,4 +32,4 @@ jobs:
       #   run: docker-compose up --t 10 --exit-code-from python_test_1
 
       - name: Execute docker-compose
-        run: docker-compose up -d --timeout 60
+        run: docker-compose up -d --timeout 30
