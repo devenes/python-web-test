@@ -23,13 +23,13 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/devenes/python-web-test?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center"> 
+<h4 align="center"> 
 	🚧  Python Web Test 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -45,7 +45,7 @@
 
 ## :dart: About ##
 
-Describe your project
+Python Web Test is a simple web app to test your Python code.
 
 ## :sparkles: Features ##
 
