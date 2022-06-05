@@ -9,8 +9,7 @@
 <h1 align="center">Python Web Test</h1>
 
 <p align="center">
-
-  [![Python Unittest](https://github.com/devenes/python-web-test/actions/workflows/python_ci.yml/badge.svg)](https://github.com/devenes/python-web-test/actions/workflows/python_ci.yml)
+  <img alt="Python Unittest" src="https://github.com/devenes/python-web-test/actions/workflows/python_ci.yml/badge.svg">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/devenes/python-web-test?color=56BEB8">
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/devenes/python-web-test?color=56BEB8">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/devenes/python-web-test?color=56BEB8">
