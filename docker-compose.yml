@@ -12,6 +12,6 @@ services:
     image: test-python
 
     volumes:
-      - '.:/usr/src/test/'
+      - '.:/app'
 
-    working_dir: /usr/src/test/
+    working_dir: /app
