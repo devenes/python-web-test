@@ -1,19 +1,19 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Python Web Test" />
+  <img src="https://mattermost.com/wp-content/uploads/2022/04/02_Unit_Testing@2x.png" alt="Python Web Test" />
 
   &#xa0;
 
   <!-- <a href="https://pythonwebtest.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Python Web Test</h1>
+<h1 align="center">Python Unit Web Test</h1>
 
 <p align="center">
   <img alt="Python Unittest" src="https://github.com/devenes/python-web-test/actions/workflows/python_ci.yml/badge.svg">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/devenes/python-web-test?color=56BEB8">
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/devenes/python-web-test?color=56BEB8">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/devenes/python-web-test?color=56BEB8">
-  <img alt="License" src="https://img.shields.io/github/license/devenes/python-web-test?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/devenes/python-web-test?color=orange">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/devenes/python-web-test?color=blue">
+  <img alt="License" src="https://img.shields.io/github/license/devenes/python-web-test?color=purple">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/devenes/python-web-test?color=56BEB8" /> -->
 
@@ -21,8 +21,6 @@
 
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/devenes/python-web-test?color=56BEB8" /> -->
 </p>
-
-Status
 
 <h4 align="center"> 
 	🚧  Python Web Test 🚀 Under construction...  🚧
@@ -85,7 +83,7 @@ $ python main.py
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html). For more details, see the [LICENSE](LICENSE) file.
 
 
 Made with :heart: by <a href="https://github.com/devenes" target="_blank">devenes</a>
