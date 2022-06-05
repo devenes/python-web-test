@@ -1,7 +1,20 @@
+FROM python:3.7-slim-buster as builder
+
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc
+
+COPY requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
+
+
+# Copy the source code to the build context
 FROM python:3.7-slim-buster
 
-WORKDIR /usr/src/test/
+WORKDIR /app
 
-COPY . ./
+COPY --from=builder /app/wheels /wheels
+COPY --from=builder /app/requirements.txt .
 
-RUN pip install -r /usr/src/test/requirements.txt
+RUN pip install --no-cache /wheels/*
